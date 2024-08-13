@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Synonym AI - Modal'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <!-- header BEGIN -->
+        @@include('html/components/header.html', {
+          'el': 'site__header'
+        })
+        <!-- header END -->
+        <main role="main" class="site__main">
+          <style>
+            .modal-list {
+              width: 100%;
+              max-width: 340rem;
+              min-height: 100vh;
+              margin: 0 auto;
+              padding: 20rem;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 20rem;
+            }
+            .modal-list__btn {
+              width: 100%;
+            }
+          </style>
+          <div class="modal-list">
+            <button type="button" data-modal="popup-registration" class="btn btn--size-md btn--theme-accent-fill modal-list__btn">popup-registration</button>
+            <button type="button" data-modal="popup-login" class="btn btn--size-md btn--theme-accent-fill modal-list__btn">popup-login</button>
+            <button type="button" data-modal="popup-restore" class="btn btn--size-md btn--theme-accent-fill modal-list__btn">popup-restore</button>
+            <button type="button" data-modal="popup-pay" class="btn btn--size-md btn--theme-accent-fill modal-list__btn">popup-pay</button>
+            <button type="button" data-modal="popup-change-password" class="btn btn--size-md btn--theme-accent-fill modal-list__btn">popup-change-password</button>
+            <button type="button" data-modal="popup-delete-account" class="btn btn--size-md btn--theme-accent-fill modal-list__btn">popup-delete-account</button>
+            <button type="button" data-modal="popup-reassurance-unscribe" class="btn btn--size-md btn--theme-accent-fill modal-list__btn">popup-reassurance-unscribe</button>
+          </div>
+        </main>
+        <!-- footer BEGIN -->
+        @@include('html/components/footer.html', {
+          'el': 'site__footer'
+        })
+        <!-- footer END -->
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

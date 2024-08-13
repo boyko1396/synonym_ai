@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Synonym AI - Личный кабинет не подписан'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <!-- header BEGIN -->
+        @@include('html/components/header-auth.html', {
+          'el': 'site__header'
+        })
+        <!-- header END -->
+        <main role="main" class="site__main">
+          <!-- settings BEGIN -->
+          <section class="settings">
+            <div class="container container--size-md settings__container">
+              <h1 class="settings__title">Личный кабинет</h1>
+              <div class="row settings__row">
+                <div class="row__col--6 settings__row-col">
+                  <article class="settings__box">
+                    <header class="settings__box-header">
+                      <h3 class="fs-1 settings__box-header-title">Профиль</h3>
+                    </header>
+                    <div class="settings__box-line">
+                      <p class="fs-3 settings__box-line-title">Почта</p>
+                      <p class="settings__box-line-text">mail@example.com</p>
+                    </div>
+                    <div class="settings__box-line">
+                      <p class="fs-3 settings__box-line-title">Пароль</p>
+                      <p class="settings__box-line-text">************</p>
+                    </div>
+                    <button type="button" data-modal="popup-change-password" class="settings__box-change">Сменить пароль</button>
+                    <div class="settings__box-footer">
+                      <div class="btn-group settings__box-footer-btn-group">
+                        <div class="btn-group__inner">
+                          <div class="btn-group__col">
+                            <a href="#" class="btn btn--size-md btn--theme-accent-outline btn-group__item">
+                              <span class="btn__inner">
+                                <span class="btn__title">Выйти</span>
+                              </span>
+                            </a>
+                          </div>
+                          <div class="btn-group__col">
+                            <button type="button" data-modal="popup-delete-account" class="btn btn--size-md btn--theme-red-outline btn-group__item">
+                              <span class="btn__inner">
+                                <span class="btn__title">Удалить аккаунт</span>
+                              </span>
+                            </button>
+                          </div>
+                          <div class="btn-group__col">
+                            <p class="settings__box-footer-text">Это действие навсегда удалит ваши данные</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="row__col--6 settings__row-col">
+                  <article class="settings__box">
+                    <header class="settings__box-header">
+                      <h3 class="fs-1 settings__box-header-title">Подписка</h3>
+                      <p class="settings__box-header-subscribe is-disabled">Не оплачена</p>
+                    </header>
+                    <div class="settings__box-line">
+                      <p class="fs-3 settings__box-line-title">Синонимайзер</p>
+                      <p class="settings__box-line-text">Без лимитов</p>
+                    </div>
+                    <div class="settings__box-line">
+                      <p class="fs-3 settings__box-line-title">Антиплагиат</p>
+                      <p class="settings__box-line-text">Без лимитов</p>
+                    </div>
+                    <div class="settings__box-footer">
+                      <div class="btn-group settings__box-footer-btn-group">
+                        <div class="btn-group__inner">
+                          <div class="btn-group__col">
+                            <button type="button" data-modal="popup-pay" class="btn btn--size-md btn--theme-accent-fill btn-group__item">
+                              <span class="btn__inner">
+                                <span class="btn__title">Оформить подписку</span>
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="row__col--6 settings__row-col">
+                  <article class="settings__box">
+                    <header class="settings__box-header">
+                      <h3 class="fs-1 settings__box-header-title">Документы</h3>
+                    </header>
+                    <div class="settings__box-btn-info">
+                      <a href="privacy.html" target="_blank" class="btn btn--size-md btn--theme-accent-outline settings__box-btn">
+                        <span class="btn__inner">
+                          <span class="btn__title">Политика конфиденциальности</span>
+                        </span>
+                      </a>
+                      <a href="terms.html" target="_blank" class="btn btn--size-md btn--theme-accent-outline settings__box-btn">
+                        <span class="btn__inner">
+                          <span class="btn__title">Условия использования</span>
+                        </span>
+                      </a>
+                      <a href="offer.html" target="_blank" class="btn btn--size-md btn--theme-accent-outline settings__box-btn">
+                        <span class="btn__inner">
+                          <span class="btn__title">Договор оферты</span>
+                        </span>
+                      </a>
+                    </div>
+                  </article>
+                </div>
+                <div class="row__col--6 settings__row-col">
+                  <article class="settings__box">
+                    <header class="settings__box-header">
+                      <h3 class="fs-1 settings__box-header-title">Поддержка</h3>
+                    </header>
+                    <div class="u-content settings__box-text">
+                      <p>У вас возникли проблемы? Наша служба поддержки готова помочь вам.</p>
+                      <p>Нажмите на ссылку ниже, чтобы связаться&nbsp;с нами:</p>
+                    </div>
+                    <div class="settings__box-btn-info">
+                      <a href="contacts.html" class="btn btn--size-md btn--theme-accent-outline settings__box-btn">
+                        <span class="btn__inner">
+                          <span class="btn__title">E-mail поддержка</span>
+                        </span>
+                      </a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- settings END -->
+          <!-- faq BEGIN -->
+          <section class="faq">
+            <div class="container container--size-md faq__container">
+              <h2 class="fs-1 faq__title">FAQ</h2>
+              <div itemscope itemtype="https://schema.org/FAQPage" class="faq__list">
+                <article class="faq-card faq-card--theme-grey-outline faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-3 faq-card__title">Как отменить подписку?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Чтобы отменить подписку, зайдите в&nbsp;раздел «Подписка» на странице личного кабинета и нажмите на&nbsp;кнопку «Отменить подписку». Ваша подписка будет отменена в&nbsp;конце текущего периода подписки. После отмены подписки с&nbsp;вас не&nbsp;будут взиматься никакие дополнительные платежи.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey-outline faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-3 faq-card__title">Как запросить возврат?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Если вы хотите запросить возврат денег, отправьте письмо в&nbsp;нашу службу поддержки с&nbsp;описанием вашего запроса на возврат. Ваш запрос на&nbsp;возврат будет обработан в&nbsp;течение 5-10 рабочих дней, если ваша ситуация соответствует нашей политике возврата.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+          <!-- faq END -->
+        </main>
+        <!-- footer BEGIN -->
+        @@include('html/components/footer.html', {
+          'el': 'site__footer'
+        })
+        <!-- footer END -->
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

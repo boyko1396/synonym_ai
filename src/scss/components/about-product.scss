@@ -1,0 +1,32 @@
+.about-product {
+  padding: 25rem 0 75rem;
+  @media (max-width: $lg) {
+    padding-top: 15rem;
+    padding-bottom: 40rem;
+  }
+  &__container {
+  }
+  &__header {
+    max-width: 620rem;
+    margin: 0 auto 50rem;
+    @media (max-width: $lg) {
+      margin-bottom: 30rem;
+    }
+  }
+  &__title {
+    margin: 0;
+    font-weight: normal;
+    line-height: $lineHeight1;
+    text-align: center;
+  }
+  &__list {
+    &-card {
+      &:not(:last-child) {
+        margin-bottom: 40rem;
+        @media (max-width: $sm) {
+          margin-bottom: 20rem;
+        }
+      }
+    }
+  }
+}

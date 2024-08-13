@@ -1,0 +1,39 @@
+.intro {
+  padding: 75rem 0 25rem;
+  @media (max-width: $lg) {
+    padding: 45rem 0 15rem;
+  }
+  &__container {
+  }
+  &__block {
+    padding: 161rem 80rem;
+    color: $greyPaleColor;
+    border-radius: $radiusSemi;
+    position: relative;
+    overflow: hidden;
+    @media (max-width: $lg) {
+      margin: 0 var(--gap-container-);
+      padding: 190rem var(--gap-container);
+      border-radius: $radiusMd;
+    }
+    &-bg {
+      @extend %bg-overlay, %img-cover;
+    }
+  }
+  &__content {
+    max-width: 510rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__title {
+    margin: 0 0 25rem;
+    color: $greyLightColor;
+    @media (max-width: $lg) {
+      margin-bottom: 15rem;
+    }
+  }
+  &__text {
+    max-width: 270rem;
+    margin: 0 auto;
+  }
+}

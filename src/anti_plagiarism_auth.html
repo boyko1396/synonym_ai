@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Synonym AI - Антиплагиат авторизированный'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <!-- header BEGIN -->
+        @@include('html/components/header-auth.html', {
+          'el': 'site__header'
+        })
+        <!-- header END -->
+        <main role="main" class="site__main">
+          <!-- rewriting-section BEGIN -->
+          <section class="rewriting-section">
+            <div class="container container--size-md rewriting-section__container">
+              <h1 class="rewriting-section__title">Проверьте свой текст на&nbsp;уникальность</h1>
+              <form action="#" class="rewriting-form rewriting-section__form">
+                <header class="rewriting-form__header">
+                  <p class="fs-3 rewriting-form__header-title">Антиплагиат</p>
+                  <div class="d-lg-none btn-group rewriting-form__header-btn-group">
+                    <div class="btn-group__inner">
+                      <div class="btn-group__col">
+                        <a href="/" class="btn btn--size-md btn--theme-accent-outline btn-group__item">
+                          <span class="btn__inner">
+                            <span class="btn__title">Подобрать синонимы к тексту</span>
+                          </span>
+                        </a>
+                      </div>
+                      <div class="btn-group__col">
+                        <button type="button" class="js-btn-uniqueness btn btn--size-md btn--theme-accent-fill btn-group__item">
+                          <span class="btn__inner">
+                            <span class="btn__title">Проверить уникальность текста</span>
+                          </span>
+                        </button>
+                        <button type="button" class="js-btn-uniqueness-clear btn btn--size-md btn--theme-accent-outline btn-group__item is-hide">
+                          <span class="btn__inner">
+                            <span class="btn__title">Очистить текст</span>
+                            <svg class="u-icon btn__icon btn__icon--dir-rtl">
+                              <use xlink:href="images/icons/icons.svg#close"></use>
+                            </svg>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+                <div class="rewriting-form__body">
+                  <div class="rewriting-form__body-textarea-row">
+                    <div class="rewriting-form__body-textarea-col">
+                      <label class="u-textarea u-textarea--size-md u-textarea--theme-white u-textarea rewriting-form__body-textarea">
+                        <div contenteditable="true" role="textbox" class="js-rewriting-textarea-input u-scrollbar u-textarea__el" data-placeholder="Вставьте текст для проверки">Природа — это великое искусство, созданное самой жизнью. Она не нуждается в кистях или красках, ведь каждый рассвет окрашивает небо нежными акварельными оттенками, а каждое дерево — это скульптура, вырезанная временем. Лес живет, шурша листьями и щебеча птицами, словно разговаривает с теми, кто готов его услышать.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <footer class="rewriting-form__footer">
+                  <div class="rewriting-form__footer-stat">
+                    <div class="rewriting-form__footer-stat-col">
+                      <div class="circular-progress circular-progress--theme-accent circular-progress--size-md rewriting-form__footer-stat-card">
+                        <div class="circular-progress__inner">
+                          <div class="circular-progress__body-wrapper">
+                            <div class="circular-progress__body">
+                              <p class="fs-1 circular-progress__title">315</p>
+                              <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="--progress: 10;" class="fs-1 circular-progress__el">
+                                <circle cx="50" cy="50" r="40" stroke-width="20" class="circular-progress__el-circle" style="--stroke: 252;"></circle>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="circular-progress__content">
+                            <p class="circular-progress__text">Всего символов</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rewriting-form__footer-stat-col">
+                      <div class="circular-progress circular-progress--theme-accent circular-progress--size-md rewriting-form__footer-stat-card">
+                        <div class="circular-progress__inner">
+                          <div class="circular-progress__body-wrapper">
+                            <div class="circular-progress__body">
+                              <p class="fs-1 circular-progress__title">270</p>
+                              <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="--progress: 25;" class="fs-1 circular-progress__el">
+                                <circle cx="50" cy="50" r="40" stroke-width="20" class="circular-progress__el-circle" style="--stroke: 252;"></circle>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="circular-progress__content">
+                            <p class="circular-progress__text">Без пробелов</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rewriting-form__footer-stat-col">
+                      <div class="circular-progress circular-progress--theme-accent circular-progress--size-md rewriting-form__footer-stat-card">
+                        <div class="circular-progress__inner">
+                          <div class="circular-progress__body-wrapper">
+                            <div class="circular-progress__body">
+                              <p class="fs-1 circular-progress__title">2</p>
+                              <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="--progress: 50;" class="fs-1 circular-progress__el">
+                                <circle cx="50" cy="50" r="40" stroke-width="20" class="circular-progress__el-circle" style="--stroke: 252;"></circle>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="circular-progress__content">
+                            <p class="circular-progress__text">Время выполнения</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rewriting-form__footer-stat-col">
+                      <div class="circular-progress circular-progress--theme-accent circular-progress--size-md rewriting-form__footer-stat-card">
+                        <div class="circular-progress__inner">
+                          <div class="circular-progress__body-wrapper">
+                            <div class="circular-progress__body">
+                              <p class="fs-1 circular-progress__title">100</p>
+                              <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="--progress: 100;" class="fs-1 circular-progress__el">
+                                <circle cx="50" cy="50" r="40" stroke-width="20" class="circular-progress__el-circle" style="--stroke: 252;"></circle>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="circular-progress__content">
+                            <p class="circular-progress__text">% оригинальности</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-lg-block btn-group rewriting-form__footer-btn-group">
+                    <div class="btn-group__inner">
+                      <div class="btn-group__col">
+                        <a href="/" class="btn btn--size-md btn--theme-accent-outline btn-group__item">
+                          <span class="btn__inner">
+                            <span class="btn__title">Подобрать синонимы к тексту</span>
+                          </span>
+                        </a>
+                      </div>
+                      <div class="btn-group__col">
+                        <button type="button" class="js-btn-uniqueness btn btn--size-md btn--theme-accent-fill btn-group__item">
+                          <span class="btn__inner">
+                            <span class="btn__title">Проверить уникальность текста</span>
+                          </span>
+                        </button>
+                        <button type="button" class="js-btn-uniqueness-clear btn btn--size-md btn--theme-accent-outline btn-group__item is-hide">
+                          <span class="btn__inner">
+                            <span class="btn__title">Очистить текст</span>
+                            <svg class="u-icon btn__icon btn__icon--dir-rtl">
+                              <use xlink:href="images/icons/icons.svg#close"></use>
+                            </svg>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </footer>
+              </form>
+            </div>
+          </section>
+          <!-- rewriting-section END -->
+        </main>
+        <!-- footer BEGIN -->
+        @@include('html/components/footer.html', {
+          'el': 'site__footer'
+        })
+        <!-- footer END -->
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

@@ -1,0 +1,27 @@
+.layout-page {
+  padding: 100rem 0 150rem;
+  @media (max-width: $lg) {
+    padding-top: 50rem;
+    padding-bottom: 90rem;
+  }
+  &__container {
+  }
+  &__title {
+    margin: 0 0 60rem;
+    font-weight: 800;
+    text-align: center;
+    @media (max-width: $lg) {
+      margin-bottom: 35rem;
+    }
+  }
+  &__row {
+  }
+  &__col {
+    @media (max-width: $lg) {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+  &__text {
+  }
+}

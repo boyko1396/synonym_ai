@@ -1,0 +1,166 @@
+.rewriting-form {
+  background: $greyColor;
+  padding: 30rem 40rem;
+  border-radius: $radiusSemi;
+  @media (max-width: $lg) {
+    margin: 0 var(--gap-container-);
+    padding: 25rem var(--gap-container) 30rem;
+    border-radius: $radiusMd;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $lg) {
+      flex-wrap: wrap;
+    }
+    &-title {
+      margin: 0;
+      flex-shrink: 0;
+      font-weight: 500;
+      @media (max-width: $lg) {
+        max-width: 100%;
+        margin: 0;
+        flex-basis: 100%;
+        text-align: center;
+      }
+    }
+    &-control-group {
+      @media (max-width: $lg) {
+        max-width: 100%;
+        margin-top: 20rem;
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      @media (max-width: $md) {
+        justify-content: flex-start;
+      }
+      .control-group__col {
+        @media (max-width: $md) {
+          max-width: 100%;
+          flex-basis: 100%;
+        }
+      }
+    }
+    &-btn-group {
+      @media (max-width: $lg) {
+        max-width: 100%;
+        margin-top: 20rem;
+        flex-basis: 100%;
+      }
+      .btn {
+        &.is-hide {
+          display: none;
+        }
+      }
+    }
+  }
+  &__body {
+    margin: 30rem 0;
+    @media (max-width: $lg) {
+      margin: 20rem 0;
+    }
+    &-textarea {
+      height: 230rem;
+      &-row {
+        display: flex;
+        @media (max-width: $sm) {
+          flex-wrap: wrap;
+        }
+      }
+      &-col {
+        max-width: 50%;
+        flex: 0 0 50%;
+        position: relative;
+        @media (max-width: $sm) {
+          max-width: 100%;
+          flex-basis: 100%;
+        }
+        &:first-child:last-child {
+          max-width: 100%;
+          flex-basis: 100%;
+        }
+        &:first-child:not(:last-child) {
+          .u-textarea {
+            border-radius: $radiusSemi 0 0 $radiusSemi;
+            border-radius: $radiusSemi 0 0 $radiusSemi;
+            @media (max-width: $sm) {
+              border-radius: $radiusMd $radiusMd 0 0;
+              border-radius: $radiusMd $radiusMd 0 0;
+            }
+          }
+        }
+        &:last-child:not(:first-child) {
+          .u-textarea {
+            border-radius: 0 $radiusSemi $radiusSemi 0;
+            border-radius: 0 $radiusSemi $radiusSemi 0;
+            @media (max-width: $sm) {
+              border-radius: 0 0 $radiusMd $radiusMd;
+              border-radius: 0 0 $radiusMd $radiusMd;
+            }
+          }
+        }
+      }
+      &-limitation {
+        position: absolute;
+        bottom: 10rem;
+        right: 10rem;
+        user-select: none;
+        pointer-events: none;
+      }
+    }
+  }
+  &__footer {
+    padding: 10rem 0;
+    @media (max-width: $sm) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &-btn-group {
+      @media (max-width: $lg) {
+        display: flex;
+        justify-content: center;
+      }
+      @media (max-width: $sm) {
+        flex-direction: column;
+      }
+      .btn-group__col {
+        @media (max-width: $sm) {
+          width: 100%;
+          max-width: 100%;
+          flex-basis: 100%;
+        }
+      }
+      .btn {
+        @media (max-width: $sm) {
+          width: 100%;
+        }
+      }
+    }
+    &-stat {
+      margin: 0 -30rem;
+      display: flex;
+      justify-content: center;
+      @media (max-width: $lg) {
+        margin: 0 -25rem;
+        flex-wrap: wrap;
+      }
+      &-col {
+        padding: 0 30rem;
+        @media (max-width: $lg) {
+          max-width: 50%;
+          padding: 0 25rem 20rem;
+          flex-basis: 50%;
+        }
+      }
+      &-card {
+      }
+    }
+    .btn {
+      &.is-hide {
+        display: none;
+      }
+    }
+  }
+}

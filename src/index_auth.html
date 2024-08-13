@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Synonym AI - авторизированный'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <!-- header BEGIN -->
+        @@include('html/components/header-auth.html', {
+          'el': 'site__header'
+        })
+        <!-- header END -->
+        <main role="main" class="site__main">
+          <!-- rewriting-section BEGIN -->
+          <section class="rewriting-section">
+            <div class="container container--size-md rewriting-section__container">
+              <h1 class="rewriting-section__title">Повысьте оригинальность текста</h1>
+              <form action="#" class="rewriting-form rewriting-section__form">
+                <header class="rewriting-form__header">
+                  <p class="fs-3 rewriting-form__header-title">Рерайт текста</p>
+                  <div class="control-group rewriting-form__header-control-group">
+                    <div class="control-group__inner">
+                      <div class="control-group__col">
+                        <label class="u-toggle u-toggle--size-md u-toggle--theme-accent u-toggle--mobile-dir-reverse control-group__item">
+                          <input type="checkbox" name="highlighting_words" class="js-rewriting-toggle-highlight u-toggle__control" checked value="Подсветка слов">
+                          <span class="u-toggle__inner">
+                            <span class="u-toggle__title">Подсветка слов</span>
+                            <span class="u-toggle__icon"></span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="control-group__col">
+                        <label class="u-toggle u-toggle--size-md u-toggle--theme-accent u-toggle--mobile-dir-reverse control-group__item">
+                          <input type="checkbox" name="edit_text" class="js-rewriting-toggle-editing u-toggle__control" value="Редактировать текст вручную">
+                          <span class="u-toggle__inner">
+                            <span class="u-toggle__title">Редактировать текст вручную</span>
+                            <span class="u-toggle__icon"></span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="control-group__col">
+                        <label class="u-toggle u-toggle--size-md u-toggle--theme-accent u-toggle--mobile-dir-reverse control-group__item">
+                          <input type="checkbox" name="text_correction" class="js-rewriting-toggle-correction u-toggle__control" checked value="С корректировкой текста">
+                          <span class="u-toggle__inner">
+                            <span class="u-toggle__title">С корректировкой текста</span>
+                            <span class="u-toggle__icon"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+                <div class="rewriting-form__body">
+                  <div class="rewriting-form__body-textarea-row">
+                    <div class="rewriting-form__body-textarea-col">
+                      <label class="u-textarea u-textarea--size-md u-textarea--theme-white u-textarea rewriting-form__body-textarea">
+                        <div contenteditable="true" role="textbox" class="js-rewriting-textarea-input u-scrollbar u-textarea__el" data-limitation="10000" data-placeholder="Ваш текст">Природа — это великое искусство, созданное самой жизнью. Она не нуждается в <span class="bg-red">кистях</span> <span class="bg-red">или</span> <span class="bg-red">красках,</span> <span class="bg-red">ведь</span> <span class="bg-red">каждый</span> рассвет окрашивает небо <span class="bg-red">нежными</span> <span class="bg-red">акварельными</span> <span class="bg-red">оттенками,</span> а каждое дерево — <span class="bg-red">это</span> скульптура, вырезанная временем. Лес живет, <span class="bg-red">шурша</span> <span class="bg-red">листьями</span> <span class="bg-red">и</span> <span class="bg-red">щебеча</span> птицами, словно <span class="bg-red">разговаривает</span> <span class="bg-red">с</span> <span class="bg-red">теми</span>, кто готов его <span class="bg-red">услышать.</span>&nbsp;</div>
+                      </label>
+                      <p class="js-rewriting-limitation limitation-char rewriting-form__body-textarea-limitation"></p>
+                    </div>
+                    <div class="rewriting-form__body-textarea-col">
+                      <label class="u-textarea u-textarea--size-md u-textarea--theme-white u-textarea rewriting-form__body-textarea">
+                        <div contenteditable="false" role="textbox" class="js-rewriting-textarea-output u-scrollbar u-textarea__el" data-readonly="true" data-placeholder="">Природа — это великое искусство, созданное самой жизнью. Она не нуждается <span class="bg-green">ни</span> в <span class="bg-green">кистях,</span> <span class="bg-green">ни</span> <span class="bg-green">в</span> красках. <span class="bg-green">Каждый</span> рассвет окрашивает небо <span class="bg-green">в</span> <span class="bg-green">нежные</span> <span class="bg-green">акварельные</span> <span class="bg-green">тона,</span> а каждое дерево — скульптура, вырезанная временем. Лес живет, <span class="bg-green">шелестит</span> <span class="bg-green">листьями,</span> <span class="bg-green">щебечет</span> птицами, словно <span class="bg-green">обращаясь</span> <span class="bg-green">к</span> <span class="bg-green">тому,</span> кто готов его <span class="bg-green">слушать.</span>&nbsp;</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <footer class="rewriting-form__footer">
+                  <div class="btn-group rewriting-form__footer-btn-group">
+                    <div class="btn-group__inner">
+                      <div class="btn-group__col">
+                        <button type="button" class="btn btn--size-md btn--theme-accent-outline btn-group__item">
+                          <span class="btn__inner">
+                            <span class="btn__title">Проверить уникальность текста</span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="btn-group__col">
+                        <button type="button" class="js-btn-synonyms btn btn--size-md btn--theme-accent-fill btn-group__item">
+                          <span class="btn__inner">
+                            <span class="btn__title">Подобрать синонимы к&nbsp;тексту</span>
+                          </span>
+                        </button>
+                        <button type="button" class="js-btn-synonyms-clear btn btn--size-md btn--theme-accent-outline btn-group__item is-hide">
+                          <span class="btn__inner">
+                            <span class="btn__title">Очистить текст</span>
+                            <svg class="u-icon btn__icon btn__icon--dir-rtl">
+                              <use xlink:href="images/icons/icons.svg#close"></use>
+                            </svg>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </footer>
+              </form>
+            </div>
+          </section>
+          <!-- rewriting-section END -->
+          <!-- intro BEGIN -->
+          <section class="intro">
+            <div class="container container--size-md intro__container">
+              <div class="intro__block">
+                <picture class="intro__block-bg">
+                  <source
+                    srcset="images/intro-block-bg.webp"
+                    type="image/webp">
+                  <img
+                    src="images/intro-block-bg.jpg"
+                    alt="Более уникальный текст с помощью Synonym AI"
+                    width="1160"
+                    height="486">
+                </picture>
+                <div class="intro__content">
+                  <h2 class="fs-1 intro__title">Более уникальный текст с&nbsp;помощью Synonym&nbsp;AI</h2>
+                  <div class="u-content intro__text">
+                    <p>Больше не нужно ломать голову над&nbsp;лучшими формулировками</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- intro END -->
+          <!-- about-product BEGIN -->
+          <section class="about-product">
+            <div class="container container--size-md about-product__container">
+              <header class="about-product__header">
+                <h2 class="fs-3 about-product__title">Наш ИИ — это мастер слова, который превращает ваши тексты в&nbsp;<em>уникальные</em> произведения</h2>
+              </header>
+              <div class="about-product__list">
+                <div class="about-card about-product__list-card">
+                  <div class="row about-card__row">
+                    <div class="row__col--7 about-card__col about-card__col--media">
+                      <div class="about-card__media">
+                        <picture class="about-card__picture">
+                          <source
+                            srcset="images/about-card-1.webp"
+                            type="image/webp">
+                          <img
+                            src="images/about-card-1.jpg"
+                            alt="Он не просто заменяет слова на синонимы, а оживляет ваши идеи, придавая им свежий и оригинальный оттенок."
+                            width="660"
+                            height="350">
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="row__col--4 about-card__col about-card__col--content">
+                      <div class="about-card__main">
+                        <div class="about-card__content">
+                          <div class="u-content about-card__text">
+                            <p>Он не просто заменяет слова на синонимы, а&nbsp;оживляет ваши идеи, придавая им свежий и&nbsp;оригинальный оттенок.</p>
+                            <p>Зачем повторяться, если можно быть уникальным? С нашим ИИ ваши мысли зазвучат по-новому и заиграют новыми красками.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-card about-product__list-card">
+                  <div class="row about-card__row">
+                    <div class="row__col--7 about-card__col about-card__col--media">
+                      <div class="about-card__media">
+                        <picture class="about-card__picture">
+                          <source
+                            srcset="images/about-card-2.webp"
+                            type="image/webp">
+                          <img
+                            src="images/about-card-2.jpg"
+                            alt="Synonym AI станет незаменимым помощником для всех, кто работает с текстом."
+                            width="660"
+                            height="350">
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="row__col--4 about-card__col about-card__col--content">
+                      <div class="about-card__main">
+                        <div class="about-card__content">
+                          <h3 class="fs-6 about-card__title">Synonym&nbsp;AI станет незаменимым помощником для всех, кто работает с&nbsp;текстом.</h3>
+                          <div class="u-content about-card__text">
+                            <p>Копирайтеры, желающие усилить выразительность своих статей. Маркетологи, стремящиеся сделать контент ярче и убедительнее.</p>
+                            <p>Студенты, которые хотят избежать повторов в своих работах. Блогеры, ищущие свежие формулировки.</p>
+                            <p>Если вы стремитесь к оригинальности и хотите, чтобы ваши тексты звучали по-новому, наш ИИ — ваш лучший союзник.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- about-product END -->
+          <!-- faq BEGIN -->
+          <section class="faq">
+            <div class="container container--size-md faq__container">
+              <h2 class="fs-1 faq__title">FAQ</h2>
+              <div itemscope itemtype="https://schema.org/FAQPage" class="faq__list">
+                <article class="faq-card faq-card--theme-grey-outline faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-3 faq-card__title">Как работает ваш ИИ для перефразирования текста?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Наш ИИ анализирует ваш исходный текст, <em>выбирает синонимы</em> и перефразирует предложения, сохраняя смысл, но делая текст <em>уникальным и свежим</em>.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey-outline faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-3 faq-card__title">Насколько уникальным станет текст после обработки?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Наш ИИ старается сделать текст максимально уникальным, сохраняя при этом его исходный смысл. Уровень уникальности зависит от исходного материала, но&nbsp;в&nbsp;большинстве случаев результат <em>существенно</em> отличается от оригинала.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey-outline faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-3 faq-card__title">Подходит ли ваш ИИ для перефразирования академических работ?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Да, наш ИИ отлично справляется с академическими текстами, сохраняя <em>научный стиль и корректность формулировок</em>, при этом помогая избежать плагиата.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey-outline faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-3 faq-card__title">Поддерживает ли ИИ разные языки?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Да, наш ИИ поддерживает несколько языков и может перефразировать тексты не только на русском, но и на других языках, сохраняя их <em>грамматическую и стилистическую правильность</em>.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey-outline faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-3 faq-card__title">Как быстро я получу перефразированный текст?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Процесс перефразирования занимает <em>считанные секунды</em>. Вы мгновенно получите результат, готовый к использованию.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey-outline faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-3 faq-card__title">Можно ли использовать ваш ИИ для создания контента для SEO?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Да, наш ИИ идеально подходит для создания <em>уникального контента</em>, который поможет улучшить SEO вашего сайта. Он перефразирует тексты, сохраняя ключевые слова и делая их более привлекательными для поисковых систем.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+          <!-- faq END -->
+        </main>
+        <!-- footer BEGIN -->
+        @@include('html/components/footer.html', {
+          'el': 'site__footer'
+        })
+        <!-- footer END -->
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

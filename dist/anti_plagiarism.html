@@ -1,0 +1,993 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="css/style.min.css??=v=20240813151011">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+  <link rel="manifest" href="static/favicon/site.webmanifest">
+  <link rel="mask-icon" href="static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="static/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#0d50b9">
+  <meta name="msapplication-config" content="static/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#0d50b9">
+  <title>Synonym AI - Антиплагиат</title>
+</head>
+<body class="u-scrollbar">
+
+  <div id="root" class="site">
+    <div class="site__inner">
+
+      <header class="header site__header">
+        <div class="container container--size-md header__container">
+          <a href="/" class="logo header__logo">
+            <picture class="logo__picture">
+              <img src="images/logo-black.svg" width="114" height="58" alt="Synonym AI"></picture>
+          </a>
+          <div class="header__dropdown">
+            <div class="d-lg-block header__dropdown-header">
+              <a href="/" class="logo header__dropdown-header-logo">
+                <picture class="logo__picture">
+                  <img src="images/logo-black.svg" width="114" height="58" alt="Synonym AI"></picture>
+              </a>
+              <button type="button" class="header__toggle header__toggle--close js-header-toggle-close">
+                <svg class="u-icon">
+                  <use xlink:href="images/icons/icons.svg#menu-close"></use>
+                </svg>
+              </button>
+            </div>
+            <nav class="header__nav u-nav" role="navigation">
+              <ul class="u-nav__list">
+                <li class="u-nav__item">
+                  <a href="/" class="u-nav__link">Синонимайзер</a>
+                </li>
+                <li class="u-nav__item">
+                  <a href="anti_plagiarism.html" class="u-nav__link">Антиплагиат</a>
+                </li>
+                <li class="u-nav__item">
+                  <a href="#" class="u-nav__link js-nav-dropdown-toggle u-nav__link--dropdown">Инструменты для работы с&nbsp;текстом</a>
+                  <ul class="u-nav__dropdown">
+                    <li class="u-nav__dropdown-item">
+                      <a href="#" class="u-nav__dropdown-link">Инструмент 1</a>
+                    </li>
+                    <li class="u-nav__dropdown-item">
+                      <a href="#" class="u-nav__dropdown-link">Инструмент 2</a>
+                    </li>
+                    <li class="u-nav__dropdown-item">
+                      <a href="#" class="u-nav__dropdown-link">Инструмент 3</a>
+                    </li>
+                    <li class="u-nav__dropdown-item">
+                      <a href="#" class="u-nav__dropdown-link">Инструмент 4</a>
+                    </li>
+                    <li class="u-nav__dropdown-item">
+                      <a href="#" class="u-nav__dropdown-link">Инструмент 5</a>
+                    </li>
+                    <li class="u-nav__dropdown-item">
+                      <a href="#" class="u-nav__dropdown-link">Инструмент 6</a>
+                    </li>
+                    <li class="u-nav__dropdown-item">
+                      <a href="#" class="u-nav__dropdown-link">Инструмент 7</a>
+                    </li>
+                    <li class="u-nav__dropdown-item">
+                      <a href="#" class="u-nav__dropdown-link">Инструмент 8</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <div class="btn-group header__btn-group">
+              <div class="btn-group__inner">
+                <div class="btn-group__col">
+                  <button type="button" data-modal="popup-login" class="btn btn--size-md btn-group__item btn--theme-accent-outline">
+                    <span class="btn__inner">
+                      <span class="btn__title">Вход</span>
+                    </span>
+                  </button>
+                </div>
+                <div class="btn-group__col">
+                  <button type="button" data-modal="popup-registration" class="btn btn--size-md btn--theme-accent-fill btn-group__item">
+                    <span class="btn__inner">
+                      <span class="btn__title">Регистрация</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="d-lg-block header__toggle header__toggle--open js-header-toggle-open">
+            <svg class="u-icon">
+              <use xlink:href="images/icons/icons.svg#menu-open"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <main role="main" class="site__main">
+
+        <section class="rewriting-section">
+          <div class="container container--size-md rewriting-section__container">
+            <h1 class="rewriting-section__title">Проверьте свой текст на&nbsp;уникальность</h1>
+            <form action="#" class="rewriting-form rewriting-section__form">
+              <header class="rewriting-form__header">
+                <p class="fs-3 rewriting-form__header-title">Антиплагиат</p>
+                <div class="btn-group d-lg-none rewriting-form__header-btn-group">
+                  <div class="btn-group__inner">
+                    <div class="btn-group__col">
+                      <a href="/" class="btn btn--size-md btn-group__item btn--theme-accent-outline">
+                        <span class="btn__inner">
+                          <span class="btn__title">Подобрать синонимы к тексту</span>
+                        </span>
+                      </a>
+                    </div>
+                    <div class="btn-group__col">
+                      <button type="button" data-modal="popup-registration" class="btn btn--size-md btn--theme-accent-fill btn-group__item">
+                        <span class="btn__inner">
+                          <span class="btn__title">Проверить уникальность текста</span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </header>
+              <div class="rewriting-form__body">
+                <div class="rewriting-form__body-textarea-row">
+                  <div class="rewriting-form__body-textarea-col">
+                    <label class="u-textarea u-textarea rewriting-form__body-textarea u-textarea--size-md u-textarea--theme-white">
+                      <div contenteditable="true" role="textbox" class="u-scrollbar js-rewriting-textarea-input u-textarea__el" data-placeholder="Вставьте текст для проверки"></div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <footer class="rewriting-form__footer">
+                <div class="rewriting-form__footer-stat">
+                  <div class="rewriting-form__footer-stat-col">
+                    <div class="circular-progress circular-progress--size-md circular-progress--theme-accent rewriting-form__footer-stat-card">
+                      <div class="circular-progress__inner">
+                        <div class="circular-progress__body-wrapper">
+                          <div class="circular-progress__body">
+                            <p class="fs-1 circular-progress__title">0</p>
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="--progress: 1;" class="fs-1 circular-progress__el">
+                              <circle cx="50" cy="50" r="40" stroke-width="20" class="circular-progress__el-circle" style="--stroke: 252;"></circle>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="circular-progress__content">
+                          <p class="circular-progress__text">Всего символов</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rewriting-form__footer-stat-col">
+                    <div class="circular-progress circular-progress--size-md circular-progress--theme-accent rewriting-form__footer-stat-card">
+                      <div class="circular-progress__inner">
+                        <div class="circular-progress__body-wrapper">
+                          <div class="circular-progress__body">
+                            <p class="fs-1 circular-progress__title">0</p>
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="--progress: 1;" class="fs-1 circular-progress__el">
+                              <circle cx="50" cy="50" r="40" stroke-width="20" class="circular-progress__el-circle" style="--stroke: 252;"></circle>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="circular-progress__content">
+                          <p class="circular-progress__text">Без пробелов</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rewriting-form__footer-stat-col">
+                    <div class="circular-progress circular-progress--size-md circular-progress--theme-accent rewriting-form__footer-stat-card">
+                      <div class="circular-progress__inner">
+                        <div class="circular-progress__body-wrapper">
+                          <div class="circular-progress__body">
+                            <p class="fs-1 circular-progress__title">0</p>
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="--progress: 1;" class="fs-1 circular-progress__el">
+                              <circle cx="50" cy="50" r="40" stroke-width="20" class="circular-progress__el-circle" style="--stroke: 252;"></circle>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="circular-progress__content">
+                          <p class="circular-progress__text">Время выполнения</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rewriting-form__footer-stat-col">
+                    <div class="circular-progress circular-progress--size-md circular-progress--theme-accent rewriting-form__footer-stat-card">
+                      <div class="circular-progress__inner">
+                        <div class="circular-progress__body-wrapper">
+                          <div class="circular-progress__body">
+                            <p class="fs-1 circular-progress__title">0</p>
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="--progress: 1;" class="fs-1 circular-progress__el">
+                              <circle cx="50" cy="50" r="40" stroke-width="20" class="circular-progress__el-circle" style="--stroke: 252;"></circle>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="circular-progress__content">
+                          <p class="circular-progress__text">% оригинальности</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-group d-lg-block rewriting-form__footer-btn-group">
+                  <div class="btn-group__inner">
+                    <div class="btn-group__col">
+                      <a href="/" class="btn btn--size-md btn-group__item btn--theme-accent-outline">
+                        <span class="btn__inner">
+                          <span class="btn__title">Подобрать синонимы к тексту</span>
+                        </span>
+                      </a>
+                    </div>
+                    <div class="btn-group__col">
+                      <button type="button" data-modal="popup-registration" class="btn btn--size-md btn--theme-accent-fill btn-group__item">
+                        <span class="btn__inner">
+                          <span class="btn__title">Проверить уникальность текста</span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </form>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="footer site__footer">
+        <div class="container container--size-md footer__container">
+          <div class="footer__row row">
+            <div class="footer__col row__col--3 footer__col--logo">
+              <a href="/" class="logo footer__logo">
+                <picture class="logo__picture">
+                  <img src="images/logo-white.svg" width="114" height="58" alt="Synonym AI"></picture>
+              </a>
+            </div>
+            <div class="footer__col row__col--3 footer__col--nav">
+              <nav class="footer__nav" role="navigation">
+                <p class="fs-3 footer__nav-title">Сервисы</p>
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item">
+                    <a href="/" class="footer__nav-link">Синонимайзер</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="anti_plagiarism.html" class="footer__nav-link">Антиплагиат</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__col row__col--3 footer__col--nav">
+              <nav class="footer__nav" role="navigation">
+                <p class="fs-3 footer__nav-title">Инструменты</p>
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item">
+                    <a href="#" class="footer__nav-link">Инструмент 1</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="#" class="footer__nav-link">Инструмент 2</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="#" class="footer__nav-link">Инструмент 3</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="#" class="footer__nav-link">Инструмент 4</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="#" class="footer__nav-link">Инструмент 5</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="#" class="footer__nav-link">Инструмент 6</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="#" class="footer__nav-link">Инструмент 7</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="#" class="footer__nav-link">Инструмент 8</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__col row__col--3 footer__col--nav">
+              <nav class="footer__nav" role="navigation">
+                <p class="fs-3 footer__nav-title">Помощь</p>
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item">
+                    <a href="contacts.html" class="footer__nav-link">Контакты</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="privacy.html" class="footer__nav-link">Политика конфиденциальности</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="terms.html" class="footer__nav-link">Условия использования</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="offer.html" class="footer__nav-link">Договор оферты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__col footer__col--copyright row__col--12">
+              <div class="footer__sc-wrapper">
+                <div class="u-sc footer__sc u-sc--size-md">
+                  <ul class="u-sc__list">
+                    <li class="u-sc__item">
+                      <a href="https://www.instagram.com/" class="u-sc__link" target="_blank" rel="noopener noreferrer">
+                        <svg class="u-icon">
+                          <use xlink:href="images/icons/icons.svg#instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="u-sc__item">
+                      <a href="https://vk.com/" class="u-sc__link" target="_blank" rel="noopener noreferrer">
+                        <svg class="u-icon">
+                          <use xlink:href="images/icons/icons.svg#vk"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="u-sc__item">
+                      <a href="https://x.com/" class="u-sc__link" target="_blank" rel="noopener noreferrer">
+                        <svg class="u-icon">
+                          <use xlink:href="images/icons/icons.svg#twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="u-sc__item">
+                      <a href="https://web.telegram.org/" class="u-sc__link" target="_blank" rel="noopener noreferrer">
+                        <svg class="u-icon">
+                          <use xlink:href="images/icons/icons.svg#telegram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <p class="footer__sc-title">Подписывайтесь!</p>
+              </div>
+              <p class="footer__copyright">© 2024 Synonym&nbsp;AI. Все права защищены</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+    <div class="u-scrollbar popup" data-popup="popup-registration" data-close-overlay>
+      <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content popup__content--size-lg popup__content--theme-grey-transparent">
+          <button type="button" class="d-md-block js-button-close popup__btn-close">
+            <svg class="u-icon btn-close__icon">
+              <use xlink:href="images/icons/icons.svg#close"></use>
+            </svg>
+          </button>
+          <div class="popup__block">
+            <div class="popup__block-row">
+              <div class="popup__block-col popup__block-col--media">
+                <div class="popup__block-media">
+                  <picture class="popup__block-bg">
+
+                    <img src="images/popup-img-apps.jpg" alt="Все возможности Synonym AI станут доступны" width="515" height="580"></picture>
+                  <div class="apps-info popup__block-apps">
+                    <p class="title fs-5 apps-info__title">Доступно на</p>
+                    <div class="apps-info__list">
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/1.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/2.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/3.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/4.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/5.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/6.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/7.svg" width="44" height="44"></picture>
+                        <picture class="apps-info__list-card-coming-soon">
+                          <img src="images/coming-soon.svg" width="84" height="24"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/8.svg" width="44" height="44"></picture>
+                      </div>
+                    </div>
+                    <div class="apps-info__rating">
+                      <picture class="apps-info__rating-picture">
+                        <img src="images/apps-info-rating.svg" width="184" height="124" alt="12+ млн довольных пользователей"></picture>
+                      <p class="title fs-5 apps-info__rating-text">
+                        12+ млн
+                        <br>
+                        довольных
+                        <br>пользователей</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup__block-col popup__block-col--main">
+                <div class="popup__main">
+                  <div class="popup__form">
+                    <div class="popup__form-header">
+                      <p class="title fs-2 popup__form-title">Все возможности Synonym&nbsp;AI станут доступны</p>
+                      <p class="popup__form-subtitle">Просто пройдите короткую регистрацию</p>
+                    </div>
+                    <form action="#" class="popup__form-el">
+                      <div class="popup__form-el-input u-input">
+                        <label class="u-input__label">
+                          <input type="email" name="email" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="mail@example.com"></label>
+                      </div>
+                      <div class="popup__form-el-input u-input">
+                        <label class="u-input__label">
+                          <input type="password" name="password" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Пароль"></label>
+                      </div>
+                      <div class="popup__form-el-wrapper">
+                        <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__form-el-btn" disabled="disabled">
+                          <span class="btn__inner">
+                            <span class="btn__title">Отправить</span>
+                          </span>
+                        </button>
+                      </div>
+                    </form>
+                    <div class="popup__form-privacy u-content">
+                      <p>
+                        Нажимая на кнопку, вы соглашаетесь с&nbsp;нашими
+                        <a href="terms.html" target="_blank">Условиями использования</a>
+                        и&nbsp;
+                        <a href="privacy.html" target="_blank">Политикой&nbsp;конфиденциальности</a>
+                        .
+                      </p>
+                    </div>
+                    <div class="popup__form-sc">
+                      <p class="popup__form-sc-title">Регистрация через соц сети</p>
+                      <div class="u-sc popup__form-sc-list u-sc--size-sm">
+                        <ul class="u-sc__list">
+                          <li class="u-sc__item">
+                            <button type="button" class="u-sc__link">
+                              <svg class="u-icon">
+                                <use xlink:href="images/icons/icons.svg#yandex-color"></use>
+                              </svg>
+                            </button>
+                          </li>
+                          <li class="u-sc__item">
+                            <button type="button" class="u-sc__link">
+                              <svg class="u-icon">
+                                <use xlink:href="images/icons/icons.svg#vk-color"></use>
+                              </svg>
+                            </button>
+                          </li>
+                          <li class="u-sc__item">
+                            <button type="button" class="u-sc__link">
+                              <svg class="u-icon">
+                                <use xlink:href="images/icons/icons.svg#google-color"></use>
+                              </svg>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="popup__form-router">
+                      <span class="popup__form-router-title">Уже есть аккаунт?</span>
+                      <button type="button" data-modal="popup-login" class="popup__form-router-link">Войти</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="u-scrollbar popup" data-popup="popup-login" data-close-overlay>
+      <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content popup__content--size-lg popup__content--theme-grey-transparent">
+          <button type="button" class="d-md-block js-button-close popup__btn-close">
+            <svg class="u-icon btn-close__icon">
+              <use xlink:href="images/icons/icons.svg#close"></use>
+            </svg>
+          </button>
+          <div class="popup__block">
+            <div class="popup__block-row">
+              <div class="popup__block-col popup__block-col--media">
+                <div class="popup__block-media">
+                  <picture class="popup__block-bg">
+
+                    <img src="images/popup-img-login.jpg" alt="Войдите в свой аккаунт Synonym AI" width="515" height="580"></picture>
+                  <div class="apps-info popup__block-apps">
+                    <p class="title fs-5 apps-info__title">Доступно на</p>
+                    <div class="apps-info__list">
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/1.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/2.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/3.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/4.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/5.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/6.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/7.svg" width="44" height="44"></picture>
+                        <picture class="apps-info__list-card-coming-soon">
+                          <img src="images/coming-soon.svg" width="84" height="24"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/8.svg" width="44" height="44"></picture>
+                      </div>
+                    </div>
+                    <div class="apps-info__rating">
+                      <picture class="apps-info__rating-picture">
+                        <img src="images/apps-info-rating.svg" width="184" height="124" alt="12+ млн довольных пользователей"></picture>
+                      <p class="title fs-5 apps-info__rating-text">
+                        12+ млн
+                        <br>
+                        довольных
+                        <br>пользователей</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup__block-col popup__block-col--main">
+                <div class="popup__main">
+                  <div class="popup__form">
+                    <div class="popup__form-header">
+                      <p class="title fs-2 popup__form-title">Войдите в&nbsp;свой аккаунт Synonym&nbsp;AI</p>
+                      <p class="popup__form-subtitle">Пользуйтесь возможностями нашего ИИ</p>
+                    </div>
+                    <form action="#" class="popup__form-el">
+                      <div class="popup__form-el-input u-input">
+                        <label class="u-input__label">
+                          <input type="email" name="email" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="mail@example.com"></label>
+                      </div>
+                      <div class="popup__form-el-input u-input">
+                        <label class="u-input__label">
+                          <input type="password" name="password" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Пароль"></label>
+                      </div>
+                      <div class="popup__form-el-wrapper">
+                        <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__form-el-btn" disabled="disabled">
+                          <span class="btn__inner">
+                            <span class="btn__title">Отправить</span>
+                          </span>
+                        </button>
+                        <p class="popup__form-el-restore">
+                          <a href="#" data-modal="popup-restore">Забыли пароль?</a>
+                        </p>
+                      </div>
+                    </form>
+                    <div class="popup__form-privacy u-content">
+                      <p>
+                        Нажимая на кнопку, вы соглашаетесь с&nbsp;нашими
+                        <a href="terms.html" target="_blank">Условиями использования</a>
+                        и&nbsp;
+                        <a href="privacy.html" target="_blank">Политикой&nbsp;конфиденциальности</a>
+                        .
+                      </p>
+                    </div>
+                    <div class="popup__form-sc">
+                      <p class="popup__form-sc-title">Вход через соц сети</p>
+                      <div class="u-sc popup__form-sc-list u-sc--size-sm">
+                        <ul class="u-sc__list">
+                          <li class="u-sc__item">
+                            <button type="button" class="u-sc__link">
+                              <svg class="u-icon">
+                                <use xlink:href="images/icons/icons.svg#yandex-color"></use>
+                              </svg>
+                            </button>
+                          </li>
+                          <li class="u-sc__item">
+                            <button type="button" class="u-sc__link">
+                              <svg class="u-icon">
+                                <use xlink:href="images/icons/icons.svg#vk-color"></use>
+                              </svg>
+                            </button>
+                          </li>
+                          <li class="u-sc__item">
+                            <button type="button" class="u-sc__link">
+                              <svg class="u-icon">
+                                <use xlink:href="images/icons/icons.svg#google-color"></use>
+                              </svg>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="popup__form-router">
+                      <span class="popup__form-router-title">Нет аккаунта?</span>
+                      <button type="button" data-modal="popup-registration" class="popup__form-router-link">Зарегистрироваться</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="u-scrollbar popup" data-popup="popup-restore" data-close-overlay>
+      <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content popup__content--size-lg popup__content--theme-grey-transparent">
+          <button type="button" class="d-md-block js-button-close popup__btn-close">
+            <svg class="u-icon btn-close__icon">
+              <use xlink:href="images/icons/icons.svg#close"></use>
+            </svg>
+          </button>
+          <div class="popup__block">
+            <div class="popup__block-row">
+              <div class="popup__block-col popup__block-col--media">
+                <div class="popup__block-media">
+                  <picture class="popup__block-bg">
+
+                    <img src="images/popup-img-login.jpg" alt="Восстановление пароля" width="515" height="580"></picture>
+                  <div class="apps-info popup__block-apps">
+                    <p class="title fs-5 apps-info__title">Доступно на</p>
+                    <div class="apps-info__list">
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/1.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/2.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/3.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/4.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/5.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/6.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/7.svg" width="44" height="44"></picture>
+                        <picture class="apps-info__list-card-coming-soon">
+                          <img src="images/coming-soon.svg" width="84" height="24"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/8.svg" width="44" height="44"></picture>
+                      </div>
+                    </div>
+                    <div class="apps-info__rating">
+                      <picture class="apps-info__rating-picture">
+                        <img src="images/apps-info-rating.svg" width="184" height="124" alt="12+ млн довольных пользователей"></picture>
+                      <p class="title fs-5 apps-info__rating-text">
+                        12+ млн
+                        <br>
+                        довольных
+                        <br>пользователей</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup__block-col popup__block-col--main">
+                <div class="popup__main">
+                  <div class="popup__form">
+                    <div class="popup__form-header">
+                      <p class="title fs-2 popup__form-title">Восстановление пароля</p>
+                      <p class="popup__form-subtitle">
+                        Введите адрес электронной почты, который  вы&nbsp;использовали при регистрации, и&nbsp;мы вышлем вам ссылку для сброса пароля
+                      </p>
+                    </div>
+                    <form action="#" class="popup__form-el">
+                      <div class="popup__form-el-input u-input">
+                        <label class="u-input__label">
+                          <input type="email" name="email" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="mail@example.com"></label>
+                      </div>
+                      <div class="popup__form-el-wrapper">
+                        <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__form-el-btn" disabled="disabled">
+                          <span class="btn__inner">
+                            <span class="btn__title">Отправить</span>
+                          </span>
+                        </button>
+                      </div>
+                    </form>
+                    <div class="popup__form-privacy u-content">
+                      <p>
+                        Нажимая на кнопку, вы соглашаетесь с&nbsp;нашими
+                        <a href="terms.html" target="_blank">Условиями использования</a>
+                        и&nbsp;
+                        <a href="privacy.html" target="_blank">Политикой&nbsp;конфиденциальности</a>
+                        .
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="u-scrollbar popup" data-popup="popup-pay" data-close-overlay>
+      <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content popup__content--size-lg popup__content--theme-grey-transparent">
+          <button type="button" class="d-md-block js-button-close popup__btn-close">
+            <svg class="u-icon btn-close__icon">
+              <use xlink:href="images/icons/icons.svg#close"></use>
+            </svg>
+          </button>
+          <div class="popup__block">
+            <div class="popup__block-row">
+              <div class="popup__block-col popup__block-col--media">
+                <div class="popup__block-media">
+                  <picture class="popup__block-bg">
+
+                    <img src="images/popup-img-pay.jpg" alt="Лучшие условия сейчас" width="515" height="580"></picture>
+                  <div class="apps-info popup__block-apps">
+                    <p class="title fs-5 apps-info__title">Доступно на</p>
+                    <div class="apps-info__list">
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/1.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/2.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/3.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/4.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/5.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/6.svg" width="44" height="44"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/7.svg" width="44" height="44"></picture>
+                        <picture class="apps-info__list-card-coming-soon">
+                          <img src="images/coming-soon.svg" width="84" height="24"></picture>
+                      </div>
+                      <div class="apps-info__list-card">
+                        <picture class="apps-info__list-card-picture">
+                          <img src="images/apps/8.svg" width="44" height="44"></picture>
+                      </div>
+                    </div>
+                    <div class="apps-info__rating">
+                      <picture class="apps-info__rating-picture">
+                        <img src="images/apps-info-rating.svg" width="184" height="124" alt="12+ млн довольных пользователей"></picture>
+                      <p class="title fs-5 apps-info__rating-text">
+                        12+ млн
+                        <br>
+                        довольных
+                        <br>пользователей</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup__block-col popup__block-col--main">
+                <div class="popup__main">
+                  <div class="popup__form">
+                    <div class="popup__form-header">
+                      <p class="title fs-6 popup__form-suptitle">Скидка -97%</p>
+                      <p class="title fs-2 popup__form-title">Лучшие условия сейчас</p>
+                      <div class="popup__form-pay-list">
+                        <p class="popup__form-pay-list-card">Без VPN</p>
+                        <p class="popup__form-pay-list-card">Без ограничений</p>
+                        <p class="popup__form-pay-list-card">Высокая скорость</p>
+                      </div>
+                    </div>
+                    <form action="#" class="popup__form-pay">
+                      <div class="popup__form-pay-price">
+                        <p class="popup__form-pay-price-discount">-97%</p>
+                        <p class="title fs-2 popup__form-pay-price-new">1&nbsp;₽&nbsp;за&nbsp;3&nbsp;дня</p>
+                        <p class="popup__form-pay-price-old">29&nbsp;₽</p>
+                      </div>
+                      <div class="popup__form-pay-wrapper">
+                        <a href="#" class="btn btn--size-md btn--theme-accent-fill disabled js-checkbox-btn popup__form-pay-btn" disabled="disabled">
+                          <span class="btn__inner">
+                            <span class="btn__title">Оплатить 1 ₽</span>
+                          </span>
+                        </a>
+                      </div>
+                      <div class="popup__form-pay-checkbox">
+                        <label class="popup__form-pay-checkbox-item u-checkbox u-checkbox--size-md u-checkbox--theme-grey-outline">
+                          <input type="checkbox" name="pay_privacy" class="js-checkbox-pay u-checkbox__control" value="Условиями использования и Договором оферты">
+                          <span class="u-checkbox__inner">
+                            <span class="u-checkbox__icon">
+                              <svg class="u-icon">
+                                <use xlink:href="images/icons/icons.svg#checked"></use>
+                              </svg>
+                            </span>
+                            <span class="u-checkbox__text">
+                              Я согласен с&nbsp;
+                              <a href="privacy.html" target="_blank">Условиями использования</a>
+                              и&nbsp;
+                              <a href="offer.html" target="_blank">Договором оферты</a>
+                            </span>
+                          </span>
+                        </label>
+                        <label class="popup__form-pay-checkbox-item u-checkbox u-checkbox--size-md u-checkbox--theme-grey-outline">
+                          <input type="checkbox" name="pay_payment" class="js-checkbox-pay u-checkbox__control" value="Первый платёж в 1 руб">
+                          <span class="u-checkbox__inner">
+                            <span class="u-checkbox__icon">
+                              <svg class="u-icon">
+                                <use xlink:href="images/icons/icons.svg#checked"></use>
+                              </svg>
+                            </span>
+                            <span class="u-checkbox__text">
+                              Первый платёж в 1 руб. за пробный период доступа в личный кабинет на 3 дня, далее согласно тарифу 890 руб. за 7 дней доступа к сервису или 390 руб. за 3 дня доступа к сервису или 190 руб. в день за доступ к сервису
+                            </span>
+                          </span>
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="u-scrollbar popup" data-popup="popup-change-password" data-close-overlay>
+      <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content popup__content--size-md popup__content--theme-grey">
+          <button type="button" class="d-md-block js-button-close popup__btn-close">
+            <svg class="u-icon btn-close__icon">
+              <use xlink:href="images/icons/icons.svg#close"></use>
+            </svg>
+          </button>
+          <div class="popup__inner">
+            <div class="popup__form">
+              <div class="popup__form-header">
+                <p class="title fs-2 popup__form-title">Изменение пароля</p>
+              </div>
+              <form action="#" class="popup__form-el">
+                <div class="popup__form-el-input u-input">
+                  <label class="u-input__label">
+                    <input type="password" name="old_password" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Введите старый пароль"></label>
+                </div>
+                <div class="popup__form-el-input u-input">
+                  <label class="u-input__label">
+                    <input type="password" name="password" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Введите новый пароль"></label>
+                </div>
+                <div class="popup__form-el-input u-input">
+                  <label class="u-input__label">
+                    <input type="password" name="password_repeat" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Повторно введите новый пароль"></label>
+                </div>
+                <div class="popup__form-el-wrapper">
+                  <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__form-el-btn" disabled="disabled">
+                    <span class="btn__inner">
+                      <span class="btn__title">Сменить пароль</span>
+                    </span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="u-scrollbar popup" data-popup="popup-delete-account" data-close-overlay>
+      <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content popup__content--size-md popup__content--theme-grey">
+          <button type="button" class="d-md-block js-button-close popup__btn-close">
+            <svg class="u-icon btn-close__icon">
+              <use xlink:href="images/icons/icons.svg#close"></use>
+            </svg>
+          </button>
+          <div class="popup__inner">
+            <div class="popup__form">
+              <div class="popup__form-header">
+                <p class="title fs-2 popup__form-title">Вы уверены, что&nbsp;хотите удалить&nbsp;аккаунт?</p>
+              </div>
+              <form action="#" class="popup__reassurance">
+                <div class="btn-group popup__reassurance-btn-group">
+                  <div class="btn-group__inner">
+                    <div class="btn-group__col">
+                      <button type="button" class="btn btn--size-md btn-group__item btn--theme-red-outline">
+                        <span class="btn__inner">
+                          <span class="btn__title">Удалить</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="btn-group__col">
+                      <button type="button" data-modal="popup-change-password" class="btn btn--size-md btn--theme-accent-fill btn-group__item">
+                        <span class="btn__inner">
+                          <span class="btn__title">Нет, я передумал</span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="u-scrollbar popup" data-popup="popup-reassurance-unscribe" data-close-overlay>
+      <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content popup__content--size-md popup__content--theme-grey">
+          <button type="button" class="d-md-block js-button-close popup__btn-close">
+            <svg class="u-icon btn-close__icon">
+              <use xlink:href="images/icons/icons.svg#close"></use>
+            </svg>
+          </button>
+          <div class="popup__inner">
+            <div class="popup__form">
+              <div class="popup__form-header">
+                <p class="title fs-2 popup__form-title">Вы уверены, что&nbsp;хотите отменить&nbsp;подписку?</p>
+              </div>
+              <form action="#" class="popup__reassurance">
+                <div class="btn-group popup__reassurance-btn-group">
+                  <div class="btn-group__inner">
+                    <div class="btn-group__col">
+                      <button type="button" class="btn btn--size-md btn-group__item btn--theme-red-outline">
+                        <span class="btn__inner">
+                          <span class="btn__title">Да</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="btn-group__col">
+                      <button type="button" data-modal="popup-change-password" class="btn btn--size-md btn--theme-accent-fill btn-group__item">
+                        <span class="btn__inner">
+                          <span class="btn__title">Нет, я передумал</span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.min.js??=v=20240813151011"></script>
+</body>
+</html>
