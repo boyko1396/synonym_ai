@@ -103,11 +103,6 @@
           color: $whiteFullColor;
         }
       }
-      &:focus,
-      &:active {
-        background: $accentColor;
-        color: $whiteFullColor;
-      }
       &:disabled,
       &.disabled {
         background: $greyCloudColor;
@@ -127,12 +122,6 @@
           border-color: $accentLightColor;
         }
       }
-      &:focus,
-      &:active {
-        background: $accentLightColor;
-        color: $whiteColor;
-        border-color: $accentLightColor;
-      }
       &:disabled,
       &.disabled {
         background: $greyCloudColor;
@@ -150,11 +139,6 @@
           background: $redColor;
           color: $whiteFullColor;
         }
-      }
-      &:focus,
-      &:active {
-        background: $redColor;
-        color: $whiteFullColor;
       }
       &:disabled,
       &.disabled {
